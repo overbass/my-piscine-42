@@ -1,0 +1,5 @@
+Credentials cache: API:E94E81A8-1F36-42B1-9B04-36150ED22BBD
+        Principal: aajax@42.FR
+
+  Issued                Expires               Principal
+Jul 29 13:36:05 2019  Aug  5 13:35:55 2019  krbtgt/42.FR@42.FR
