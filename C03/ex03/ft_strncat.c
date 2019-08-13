@@ -6,25 +6,24 @@
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 09:57:09 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/13 10:00:36 by aajax            ###   ########.fr       */
+/*   Updated: 2019/08/13 17:11:57 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int i;
-	unsigned int s;
+	unsigned int s_dest;
 
 	i = 0;
-	s = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[s] != '\0' && i < nb)
+	s_dest = 0;
+	while (dest[s_dest] != '\0')
+		s_dest++;
+	while (src[i] != '\0' && i < nb)
 	{
-		dest[i] = src[s];
-		s++;
+		dest[s_dest + i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dest[s_dest + i] = '\0';
 	return (dest);
 }
