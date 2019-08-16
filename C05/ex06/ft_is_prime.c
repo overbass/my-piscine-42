@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 09:46:22 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/15 05:51:41 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/16 11:00:49 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/16 11:19:50 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int		ft_is_prime(int nb)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int i;
+
+	i = 2;
+	if (nb < 2)
+		return (0);
+	while (nb / i >= i)
+	{
+		if (nb % i == 0)
+			return (0);
+		i++;
+	}
+	return (1);
 }

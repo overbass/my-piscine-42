@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 09:46:22 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/15 05:51:41 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/14 17:17:07 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/14 22:16:48 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int		ft_iterative_factorial(int nb)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int a;
+
+	a = nb;
+	if (nb < 0)
+		return (0);
+	if (nb == 0)
+		return (1);
+	while (--nb && nb != 0)
+		a = a * nb;
+	return (a);
 }

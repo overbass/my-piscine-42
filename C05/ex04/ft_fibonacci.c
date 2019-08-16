@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 09:46:22 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/15 05:51:41 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/15 17:10:45 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/15 18:23:59 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int	ft_fibonacci(int index)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int res;
+
+	if (index < 0)
+		return (-1);
+	if (index < 2)
+		return (index);
+	else
+	{
+		res = (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
+		return (res);
+	}
 }

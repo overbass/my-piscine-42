@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 09:46:22 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/15 05:51:41 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/14 21:51:01 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/16 11:32:00 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int		ft_recursive_factorial(int nb)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	if (nb < 0)
+		return (0);
+	if (nb == 1 || nb == 0)
+		return (1);
+	else if (nb > 1)
+		return (nb * ft_recursive_factorial(nb - 1));
+	return (0);
 }

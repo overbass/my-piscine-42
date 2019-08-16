@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 09:46:22 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/15 05:51:41 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/14 23:02:13 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/16 10:26:28 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+int		ft_iterative_power(int nb, int power)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int i;
+
+	i = nb;
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	if (nb == 0)
+		return (0);
+	if (power == 1)
+		return (1);
+	while (power > 1)
+	{
+		i = (i * nb);
+		power--;
+	}
+	return (i);
 }
