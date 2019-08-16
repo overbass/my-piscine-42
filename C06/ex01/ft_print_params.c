@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 14:07:00 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/15 17:10:03 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/16 12:21:04 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/16 23:05:39 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_recursive_power(int nb, int power)
+#include <unistd.h>
+
+int		ft_strlen(char *str)
 {
-	if (power == 0)
-		return (1);
-	if (power == 1)
-		return (nb);
-	if (power > 1)
-		return (nb * ft_recursive_power(nb, power - 1));
-	if (power < 0)
-		return (0);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+int		main(int argc, char **argv)
+{
+	int i;
+
+	i = 1;
+	while (i < argc)
+	{
+		write(1, argv[i], ft_strlen(argv[i]));
+		write(1, "\n", 1);
+		i++;
+	}
 	return (0);
 }

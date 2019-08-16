@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/14 21:51:01 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/16 11:32:00 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/16 11:50:40 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/16 12:20:31 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_recursive_factorial(int nb)
+#include <unistd.h>
+
+int		ft_strlen(char *str)
 {
-	if (nb < 0)
-		return (0);
-	if (nb == 1 || nb == 0)
-		return (1);
-	else if (nb > 1)
-		return (nb * ft_recursive_factorial(nb - 1));
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+int		main(int argc, char **argv)
+{
+	(void)argc;
+	write(1, argv[0], ft_strlen(argv[0]));
+	write(1, "\n", 1);
 	return (0);
 }
