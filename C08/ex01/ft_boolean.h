@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_piscine_42.c                                    :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: xxxx/xx/xx xx:xx:xx by aajax             #+#    #+#             */
-/*   Updated: xxxx/xx/xx xx:xx:xx by aajax            ###   ########.fr       */
+/*   Created: 2019/08/19 19:30:27 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/20 00:02:14 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <"my_piscine_42.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
+# include <unistd.h>
 
-# Trace de ma piscine a l'ecole 42 (piscine-aout-2019)
- ne pas recopier mais essayer de comprendre svp !!!, LE STAFF VOUS VOIENT >)
+typedef int		t_bool;
+
+# define EVEN(nbr) nbr % 2 == 0
+# define TRUE 1
+# define FALSE 0
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 0
+#endif

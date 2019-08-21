@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_piscine_42.c                                    :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: xxxx/xx/xx xx:xx:xx by aajax             #+#    #+#             */
-/*   Updated: xxxx/xx/xx xx:xx:xx by aajax            ###   ########.fr       */
+/*   Created: 2019/08/20 14:39:02 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/21 02:42:45 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <"my_piscine_42.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-# Trace de ma piscine a l'ecole 42 (piscine-aout-2019)
- ne pas recopier mais essayer de comprendre svp !!!, LE STAFF VOUS VOIENT >)
+typedef struct	s_point
+{
+	int		x;
+	int		y;
+}				t_point;
+#endif

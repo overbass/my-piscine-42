@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_piscine_42.c                                    :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: xxxx/xx/xx xx:xx:xx by aajax             #+#    #+#             */
-/*   Updated: xxxx/xx/xx xx:xx:xx by aajax            ###   ########.fr       */
+/*   Created: 2019/08/19 23:34:47 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/19 23:55:13 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <"my_piscine_42.h>
-
-# Trace de ma piscine a l'ecole 42 (piscine-aout-2019)
- ne pas recopier mais essayer de comprendre svp !!!, LE STAFF VOUS VOIENT >)
+#ifndef FT_ABS_H
+# define FT_ABS_H
+# define ABS(value) (value < 0 ? -value : value)
+#endif
