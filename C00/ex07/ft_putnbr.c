@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 09:46:22 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/04 19:04:37 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/13 19:11:23 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/13 21:54:00 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	putchar(char c)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb < 0)
+	{
+		putchar('-');
+		if (nb == -2147483648)
+		{
+			write(1, "2147483648", 10);
+			return ;
+		}
+		nb = nb * -1;
+	}
+	if (nb >= 10)
+		ft_putnbr(nb / 10);
+	putchar(nb % 10 + '0');
 }

@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aajax <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 09:46:22 by aajax             #+#    #+#             */
-/*   Updated: 2019/08/04 19:04:37 by aajax            ###   ########.fr       */
+/*   Created: 2019/08/22 14:28:00 by aajax             #+#    #+#             */
+/*   Updated: 2019/08/22 14:56:14 by aajax            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	int c;
+	int i;
+	int tmp;
+
+	c = 0;
+	while (c < size)
+	{
+		i = 0;
+		while (i < (size - 1))
+		{
+			if (tab[i] > tab[i + 1])
+			{
+				tmp = tab[i];
+				tab[i] = tab[i + 1];
+				tab[i + 1] = tmp;
+			}
+			i++;
+		}
+		c++;
+	}
 }
